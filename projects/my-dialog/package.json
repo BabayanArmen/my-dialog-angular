@@ -11,5 +11,9 @@
   "author": {
     "name": "Armen Babayan",
     "email": "armenbabayan1984@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BabayanArmen/my-dialog-angular"
   }
 }
