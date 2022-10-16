@@ -12,6 +12,9 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
+      "angular-dynamic-dialog-for-everyone-arm": [
+        "dist/angular-dynamic-dialog-for-everyone-arm"
+      ],
       "my-dialog": [
         "dist/my-dialog"
       ]

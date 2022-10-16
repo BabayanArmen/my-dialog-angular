@@ -133,6 +133,37 @@
           }
         }
       }
+    },
+    "angular-dynamic-dialog-for-everyone-arm": {
+      "projectType": "library",
+      "root": "projects/angular-dynamic-dialog-for-everyone-arm",
+      "sourceRoot": "projects/angular-dynamic-dialog-for-everyone-arm/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-dynamic-dialog-for-everyone-arm/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-dynamic-dialog-for-everyone-arm/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-dynamic-dialog-for-everyone-arm/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-dynamic-dialog-for-everyone-arm/src/test.ts",
+            "tsConfig": "projects/angular-dynamic-dialog-for-everyone-arm/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-dynamic-dialog-for-everyone-arm/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }
