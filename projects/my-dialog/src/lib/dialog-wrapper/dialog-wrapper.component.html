@@ -1,0 +1,15 @@
+<div class="wrapper" id="dialog-wrapper" (click)="outsideClickCloseEvent($event)">
+    <div class="dialog">
+        <div *ngIf="showHeader" class="header">
+            <div>
+                <span class="close" (click)="closeDialog()">&#10006;</span>
+            </div>
+        </div>
+        <div class="content">
+            <ng-container *ngIf="component" [ngComponentOutlet]="component" [ngComponentOutletInjector]="dialogDataInjector"></ng-container>
+        </div>
+        <div *ngIf="showFooter" class="footer">
+            <button class="footer-close-button" (click)="closeDialog()">Close</button>
+        </div>
+    </div>   
+</div>

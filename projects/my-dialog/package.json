@@ -1,0 +1,15 @@
+{
+  "name": "my-dialog",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "author": {
+    "name": "Armen Babayan",
+    "email": "armenbabayan1984@gmail.com"
+  }
+}
