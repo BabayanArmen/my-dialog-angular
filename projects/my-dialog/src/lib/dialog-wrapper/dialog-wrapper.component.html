@@ -1,15 +1,15 @@
-<div class="wrapper" id="dialog-wrapper" (click)="outsideClickCloseEvent($event)">
-    <div class="dialog">
+<div class="dialog-wrapper" id="dialog-wrapper" (click)="outsideClickCloseEvent($event)">
+    <div class="dialog" [ngStyle]="{'width': dialogWidth}">
         <div *ngIf="showHeader" class="header">
             <div>
-                <span class="close" (click)="closeDialog()">&#10006;</span>
+                <span class="close" (click)="closeEvent()">&#10006;</span>
             </div>
         </div>
-        <div class="content">
+        <div class="content" [ngStyle]="{'padding' : contentPadding}">
             <ng-container *ngIf="component" [ngComponentOutlet]="component" [ngComponentOutletInjector]="dialogDataInjector"></ng-container>
         </div>
         <div *ngIf="showFooter" class="footer">
-            <button class="footer-close-button" (click)="closeDialog()">Close</button>
+            <button class="footer-close-button" (click)="closeEvent()">Close</button>
         </div>
-    </div>   
+    </div>
 </div>

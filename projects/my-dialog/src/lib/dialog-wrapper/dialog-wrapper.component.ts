@@ -1,5 +1,4 @@
-import { Component, Injector, OnInit, Type } from '@angular/core';
-import { MyDialogService } from '../my-dialog.service';
+import { Component, Injector, OnInit, Type, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'lib-dialog-wrapper',
@@ -8,22 +7,23 @@ import { MyDialogService } from '../my-dialog.service';
 })
 export class DialogWrapperComponent implements OnInit {
   public component?: Type<any>;
-  public showHeader: boolean = true;
-  public showFooter: boolean = true;
-  public clickOutesideClose: boolean = false;
-  public dialogDataInjector?: Injector;
+  public showHeader?: boolean;
+  public showFooter?: boolean;
+  public clickOutesideClose?: boolean;
+  public dialogWidth?: string;
+  public dialogDataInjector!: Injector;
+  public contentPadding?: string;
 
-  constructor(public dialogService: MyDialogService) { }
+  public closeEvent!: Function;
 
-  ngOnInit(): void {   
-  }
+  constructor() { }
 
-  closeDialog() {
-    this.dialogService.closeDialog()
+  ngOnInit(): void {
   }
 
   outsideClickCloseEvent(event: any) {
     if(event.target.id === 'dialog-wrapper' && this.clickOutesideClose) {
-      this.closeDialog()
+      this.closeEvent();
     }
-  }}
+  }
+}

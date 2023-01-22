@@ -1,5 +1,6 @@
-.wrapper{
+.dialog-wrapper{
     position: fixed;
+    /* position: absolute; */
     top: 0;
     left: 0;
     right: 0;
@@ -7,17 +8,19 @@
     background-color: rgba(0, 0, 0, 0.366);
     animation-name: fadeIn;
     animation-duration: 0.3s;
+    z-index: 11;
 }
 .dialog{
-    margin: 10% auto;
-    width: 80%;
+    margin: 5% auto;
+    /* width: 80%; */
     height: auto;
     background-color: white;
     box-sizing: border-box;
     border-radius: 5px;
+    /* border: 1px solid rgb(182, 178, 178); */
 }
 .header{
-    width: 100%;
+    /* width: 100%; */
     padding: 15px;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(155, 155, 155);
@@ -29,11 +32,13 @@
     cursor: pointer;
 }
 .content{
+    /* background-color: var(--card-background-color); */
+    /* background-color: rgb(78, 78, 78); */
     width: 100%;
     padding: 7px;
 }
 .footer{
-    width: 100%;
+    /* width: 100%; */
     padding: 15px;
     box-sizing: border-box;
     display: flex;
@@ -51,6 +56,11 @@
     background-color: whitesmoke;
 }
 @keyframes fadeIn {
-    from {opacity: 0} 
+    from {opacity: 0}
     to {opacity: 1}
 }
+@media screen and (max-width: 1199px) {
+    .dialog-wrapper {
+        left: 0;
+    }
+  }
